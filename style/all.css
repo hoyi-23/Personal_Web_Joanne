@@ -1,0 +1,578 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* RESET */
+img {
+  max-width: 100%;
+  /* 適應 & 伸縮 */
+  height: auto;
+  /* 適應 & 伸縮 */
+  vertical-align: middle;
+  /* 圖片會預留 2-3px 在下面 */
+}
+
+*, *::before, *::after {
+  /* 全域 border box > 不用算內距 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* RESET-end */
+/*共用custom*/
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-content-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-bolder {
+  font-weight: 900;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*custom-end*/
+/*color*/
+.text-primary {
+  color: #cab0b4 !important;
+}
+
+.bg-primary {
+  background-color: #cab0b4 !important;
+}
+
+.text-secondary {
+  color: #891818 !important;
+}
+
+.bg-secondary {
+  background-color: #891818 !important;
+}
+
+.text-notice {
+  color: #891818 !important;
+}
+
+.bg-notice {
+  background-color: #891818 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.text-dark {
+  color: #666 !important;
+}
+
+.bg-dark {
+  background-color: #666 !important;
+}
+
+.text-light {
+  color: #f3f3f3 !important;
+}
+
+.bg-light {
+  background-color: #f3f3f3 !important;
+}
+
+/*color-end*/
+/*spacing*/
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.75rem !important;
+}
+
+.pt-1 {
+  padding-top: 0.75rem !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.75rem !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.75rem !important;
+}
+
+.ml-1 {
+  margin-left: 0.75rem !important;
+}
+
+.pl-1 {
+  padding-left: 0.75rem !important;
+}
+
+.mr-1 {
+  margin-right: 0.75rem !important;
+}
+
+.pr-1 {
+  padding-right: 0.75rem !important;
+}
+
+.mt-2 {
+  margin-top: 1rem !important;
+}
+
+.pt-2 {
+  padding-top: 1rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 1rem !important;
+}
+
+.ml-2 {
+  margin-left: 1rem !important;
+}
+
+.pl-2 {
+  padding-left: 1rem !important;
+}
+
+.mr-2 {
+  margin-right: 1rem !important;
+}
+
+.pr-2 {
+  padding-right: 1rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.25rem !important;
+}
+
+.pt-3 {
+  padding-top: 1.25rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1.25rem !important;
+}
+
+.pb-3 {
+  padding-bottom: 1.25rem !important;
+}
+
+.ml-3 {
+  margin-left: 1.25rem !important;
+}
+
+.pl-3 {
+  padding-left: 1.25rem !important;
+}
+
+.mr-3 {
+  margin-right: 1.25rem !important;
+}
+
+.pr-3 {
+  padding-right: 1.25rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.ml-4 {
+  margin-left: 1.5rem !important;
+}
+
+.pl-4 {
+  padding-left: 1.5rem !important;
+}
+
+.mr-4 {
+  margin-right: 1.5rem !important;
+}
+
+.pr-4 {
+  padding-right: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 1.75rem !important;
+}
+
+.pt-5 {
+  padding-top: 1.75rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 1.75rem !important;
+}
+
+.pb-5 {
+  padding-bottom: 1.75rem !important;
+}
+
+.ml-5 {
+  margin-left: 1.75rem !important;
+}
+
+.pl-5 {
+  padding-left: 1.75rem !important;
+}
+
+.mr-5 {
+  margin-right: 1.75rem !important;
+}
+
+.pr-5 {
+  padding-right: 1.75rem !important;
+}
+
+.mt-6 {
+  margin-top: 2rem !important;
+}
+
+.pt-6 {
+  padding-top: 2rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 2rem !important;
+}
+
+.pb-6 {
+  padding-bottom: 2rem !important;
+}
+
+.ml-6 {
+  margin-left: 2rem !important;
+}
+
+.pl-6 {
+  padding-left: 2rem !important;
+}
+
+.mr-6 {
+  margin-right: 2rem !important;
+}
+
+.pr-6 {
+  padding-right: 2rem !important;
+}
+
+.mt-7 {
+  margin-top: 2.5rem !important;
+}
+
+.pt-7 {
+  padding-top: 2.5rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 2.5rem !important;
+}
+
+.pb-7 {
+  padding-bottom: 2.5rem !important;
+}
+
+.ml-7 {
+  margin-left: 2.5rem !important;
+}
+
+.pl-7 {
+  padding-left: 2.5rem !important;
+}
+
+.mr-7 {
+  margin-right: 2.5rem !important;
+}
+
+.pr-7 {
+  padding-right: 2.5rem !important;
+}
+
+/*spacing-end*/
+/*font-size*/
+.fs-1 {
+  font-size: 5rem !important;
+}
+
+.fs-2 {
+  font-size: 4rem !important;
+}
+
+.fs-3 {
+  font-size: 1.5rem !important;
+}
+
+.fs-4 {
+  font-size: 1.25rem !important;
+}
+
+/*font-size-end*/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-image: url(/img/headerPhtot.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header-content {
+  width: 20%;
+}
+
+.header-content .header-title {
+  line-height: 106px;
+}
+
+.header-content .header-body {
+  line-height: 36px;
+}
+
+.header-link {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-content {
+  width: 30%;
+  margin-top: 3.5rem;
+}
+
+.about-content .about-text {
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.about-experience-content {
+  border-top: solid 1px #000;
+}
+
+.about-experience-content .about-experience {
+  line-height: 37px;
+}
+
+.about-experience-content .about-experience::before {
+  content: "";
+  margin-right: 1rem;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: #891818;
+  border-radius: 50%;
+}
+
+.mybrand-content {
+  width: 80%;
+  padding-top: 3.5rem;
+  padding-bottom: 10rem;
+}
+
+.mybrand-content .mybrand-title {
+  line-height: 84px;
+}
+
+.mybrand-content .mybrand-text {
+  line-height: 30px;
+}
+
+.otherWork-content {
+  width: 80%;
+  padding-top: 3.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.otherWork-content .otherWork-title {
+  line-height: 84px;
+}
+
+.otherWork-content .otherWork-text {
+  line-height: 30px;
+}
+
+footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+footer .footer-title {
+  line-height: 84px;
+}
+/*# sourceMappingURL=all.css.map */

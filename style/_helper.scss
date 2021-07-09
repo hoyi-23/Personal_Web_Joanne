@@ -1,0 +1,76 @@
+/*color*/
+$primary: rgb(202, 176, 180);
+$secondary: #891818;
+$notice: #891818;
+$white: #fff;
+$black: #000;
+$dark: #666;
+$light: #f3f3f3;
+
+$theme-color: (
+  primary:  $primary,
+  secondary: $secondary,
+  notice: $notice,
+  white: white,
+  black: $black,
+  dark: $dark,
+  light: $light,
+);
+
+
+@each $theme, $color in $theme-color{
+  .text-#{$theme}{
+    color: #{$color} !important;
+  };
+  .bg-#{$theme}{
+    background-color: #{$color} !important;
+  }
+};
+
+/*color-end*/
+
+/*spacing*/
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.75,
+  2: $spacer,
+  3: $spacer * 1.25,
+  4: $spacer * 1.5,
+  5: $spacer * 1.75,
+  6: $spacer * 2,
+  7: $spacer * 2.5,
+);
+
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each  $space, $spaceamount in $spacers {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$spaceamount} !important;
+    };
+  
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$spaceamount} !important;
+    }
+  }
+}
+
+/*spacing-end*/
+
+/*font-size*/
+$sizer: 1rem !default;
+$sizes: (
+  1: $sizer * 5,
+  2: $sizer * 4,
+  3: $sizer * 1.5,
+  4: $sizer * 1.25,
+);
+
+@each $size, $sizeamount in $sizes{
+  .fs-#{$size}{
+    font-size: #{$sizeamount} !important;
+  }
+};
+
+/*font-size-end*/

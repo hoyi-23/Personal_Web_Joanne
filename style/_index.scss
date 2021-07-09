@@ -1,0 +1,76 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  background-image: url(/img/headerPhtot.png);
+  @include  zoomimage;
+  height: 100vh;
+}
+.header-content{
+  width: 20%;
+  .header-title{
+    line-height: 106px;
+  }
+  .header-body{
+    line-height: 36px;
+  }
+}
+.header-link{
+  justify-content: space-between;
+}
+
+.about-content{
+  width: 30%;
+  margin-top: 3.5rem;
+  .about-text{
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+}
+.about-experience-content{
+  border-top: solid 1px #000;
+  .about-experience{
+    line-height: 37px;
+    &::before{
+      content: "";
+      margin-right: 1rem;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: $secondary;
+      border-radius: 50%;
+    }
+  }  
+}
+
+.mybrand-content{
+ width: 80%;
+ padding-top: 3.5rem;
+ padding-bottom: 10rem;
+ .mybrand-title{
+   line-height: 84px;
+ }
+ .mybrand-text{
+   line-height: 30px;
+ }
+}
+
+.otherWork-content{
+  width: 80%;
+  padding-top: 3.5rem;
+  padding-bottom: 7.5rem;
+  .otherWork-title{
+    line-height: 84px;
+  }
+  .otherWork-text{
+    line-height: 30px;
+  }
+}
+footer{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  .footer-title{
+    line-height: 84px;
+  }
+}
